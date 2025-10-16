@@ -1,7 +1,5 @@
-fun main() {
-    val myBoolean: Boolean = false
-    val myBoolean2: Boolean = true
-
+fun main () {
+    val myBoolean : Boolean = true
+    val myBoolean2: Boolean = false
     println(myBoolean)
-    println(myBoolean2)
 }

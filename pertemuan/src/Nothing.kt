@@ -1,7 +1,7 @@
-fun fail(message: String){
-    throw IllegalArgumentException(message)
+fun fail(massage : String){
+    throw IllegalArgumentException(massage)
 }
-fun main() {
-    //Program akan berhenti disini dengan error
-    fail("terjadi kesalahan fatal")
+
+fun main(){
+    fail("Terjadi Kesalahan Fatal")
 }

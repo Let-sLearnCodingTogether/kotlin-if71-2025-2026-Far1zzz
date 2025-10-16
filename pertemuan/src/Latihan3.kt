@@ -1,8 +1,13 @@
-fun main() {
-    val name: String = "Chandra Saputra"
-    val npm: String = "2226250093"
-    var age : Int = 0
-    age=21
+fun hitungPanjanNama(nama: String?):Int
+{
+    if(nama!=null)
+    {
+        return nama.length
+    }
+    return 0
+}
 
-    println("mahasiswa dengan "+npm+" memiliki nama "+name+"memiliki usia " +age)
+fun main() {
+
+    print(hitungPanjanNama("nama"))
 }

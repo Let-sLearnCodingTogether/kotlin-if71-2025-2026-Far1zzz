@@ -1,7 +1,6 @@
-fun greeting(name:String){
-    println("Welcome, $name")
+fun greeting(name : String){
+    println("Welcome $name")
 }
-
-fun main() {
-    greeting("user 1")
+fun main(){
+    greeting("User 1")
 }

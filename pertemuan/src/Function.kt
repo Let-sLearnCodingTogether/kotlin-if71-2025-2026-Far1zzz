@@ -1,7 +1,6 @@
 fun helloFunction(){
     println("Hello Function")
 }
-
-fun main() {
+fun main(){
     helloFunction()
 }

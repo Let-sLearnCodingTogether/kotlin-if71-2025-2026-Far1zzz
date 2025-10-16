@@ -1,9 +1,8 @@
-fun main () {
-    val university :String = " Universitas Multi Data Palembang"
+fun main(){
     val address :String = """
         Jln.Rajawali
         Sumatera Selatan
         Palembang
-        """.trimMargin()
+        """.trimIndent()
     println(address)
 }

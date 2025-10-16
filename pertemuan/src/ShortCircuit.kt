@@ -1,12 +1,9 @@
-fun main() {
-    val isLoggedIn = false
+fun main(){
+    val isLonggetIn = false
 
-    //&&  operan kedua akan dievaluasi jika operan pertama bernilai true
-    //||  operan kedua akan dievaluasi jika operan pertama bernilai False
-    if (isLoggedIn || (5/0 == 0)){
-        println("User has access")
-    }
-    else{
+    if(isLonggetIn && (5/0 == 0)){
+        println("User has Access")
+    }else{
         println("Access denied")
     }
 }

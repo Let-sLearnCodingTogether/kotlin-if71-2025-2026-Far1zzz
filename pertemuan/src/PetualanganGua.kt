@@ -1,84 +1,98 @@
 fun main() {
-    print("Masukkan nama pemain: ")
-    val namaPemain = readLine() ?: "Petualang"
-
+    print("Siapa nama anda : ")
+    val namaPermain: String =readln()
     var kesehatanPemain = 100
-    var punyaKunciEmas = false
-    var jumlahPotion = 2
+    var punyaKunciEmas :Boolean = false
+    var jumlahPotion :Int =2
+    var sedangBermain: Boolean = true
 
-    var sedangBermain = true
+    while (sedangBermain==true)
+    {
+        println("===Status Bermain ===")
+        println("nama permian : $namaPermain")
+        println("kesehatan anda : $kesehatanPemain ")
+        println("Jumalh Potion yang tersedia $jumlahPotion")
 
-    while (sedangBermain) {
-        println("\n============================")
-        println("Status Pemain:")
-        println("Nama       : $namaPemain")
-        println("Kesehatan  : $kesehatanPemain")
-        println("Potion     : $jumlahPotion")
-        println("============================")
-
-        if (kesehatanPemain <= 0) {
-            println("Sayang sekali, $namaPemain telah kalah...")
-            break
-        }
-
-        println("Didepan kamu terdapat 2 buah jalur:")
+        println("\nDi depan kamu terdapat 2 buah jalur (1, 2):")
         println("1). Jalur gelap dan seram")
         println("2). Jalur tenang dan sunyi")
         print("Pilih jalur (1/2): ")
+        val pilihJalur= readln().toInt()
+        if (pilihJalur==1)
+        {
+            println("Kamu masuk ke Jalur gelap dan seram")
+            println("Kamu berada disebuah ruangan dengan tiga patung : naga, griffin, dan ular")
+            val pilihRuangan=readln()
 
-        val pilihanJalur = readLine()
-
-        if (pilihanJalur == "1") {
-            print("Pilih patung (naga/griffin/ular): ")
-            val pilihanPatung = readLine()
-
-            when (pilihanPatung?.lowercase()) {
+            when (pilihRuangan) {
                 "naga" -> {
-                    println("Patung naga mengeluarkan api! Kamu terbakar!")
+                    println("Patung naga mengeluarkan api! Kesehatan kamu berkurang 35 poin.")
                     kesehatanPemain -= 35
+                    println("anda kena serang patung naga yang mengeluarkan api hp anda berkurang : $kesehatanPemain")
                 }
+
                 "griffin" -> {
-                    println("Patung griffin bersinar... kamu mendapatkan kunci emas!")
+                    println("Kamu mendapatkan kunci emas dari patung griffin!")
                     punyaKunciEmas = true
+                    println("anda mendapatkan kunci emas Boleh Juga kamu $namaPermain ini kunci emas emasmu : $punyaKunciEmas")
+                    if (punyaKunciEmas == true) {
+                        println("\nKamu menggunakan kunci emas dan menemukan artefak kuno!”, dan permainan selesai\n!")
+                        sedangBermain = false
+                        break
+                    }
                 }
+
+
                 "ular" -> {
-                    println("Patung ular menggigitmu! Racun menyebar ke tubuhmu!")
+                    println("Patung ular menggigit kamu! Kesehatan berkurang 15 poin.")
                     kesehatanPemain -= 15
+                    println("anda Kena gigir ular, Tolong hari hati. hp anda berkurang : $kesehatanPemain")
                 }
+
                 else -> {
-                    println("Kamu ragu-ragu, tapi tidak terjadi apa-apa...")
+                    println("Kamu tidak memilih patung yang benar, jadi tidak terjadi apa-apa.")
                 }
-            }
 
-            if (jumlahPotion > 0 && kesehatanPemain > 0) {
-                print("Apakah kamu ingin menggunakan potion? (y/n): ")
-                val pakaiPotion = readLine()
-                if (pakaiPotion?.lowercase() == "y") {
-                    jumlahPotion--
+            }
+            if (kesehatanPemain <= 0) {
+                println("\nKesehatan kamu sudah habis. Kamu kalah!")
+                sedangBermain = false
+                break
+            }
+            if (jumlahPotion > 0) {
+                println("Mau menggunakan potion untuk menambah 10 poin kesehatan? (y/n)")
+                val pakaiPotion = readln()
+                if (pakaiPotion == "y") {
                     kesehatanPemain += 10
-                    if (kesehatanPemain > 100) kesehatanPemain = 100
-                    println("Kamu minum potion. Kesehatanmu sekarang $kesehatanPemain")
+                    if (kesehatanPemain > 100) {
+                        kesehatanPemain = 100
+                    }
+                    jumlahPotion--
+                    println("Potion digunakan. Kesehatan sekarang $kesehatanPemain. Potion tersisa $jumlahPotion.")
+                } else {
+                    println("Potion tidak digunakan.")
                 }
+
+
             }
 
-        } else if (pilihanJalur == "2") {
-            println("Kamu menginjak perangkap! Anak panah mengenai tubuhmu...")
-            kesehatanPemain -= 25
-        } else {
-            println("Kamu kebingungan dan hanya berdiri di tempat...")
+
+
         }
 
-        if (punyaKunciEmas) {
-            println("Kamu menggunakan kunci emas dan menemukan artefak kuno!")
-            sedangBermain = false
-        } else {
-            println("Kamu harus mencari kunci emas terlebih dahulu!")
+        else if(pilihJalur==2)
+        {
+            kesehatanPemain-=25
+            println("Kamu menginjak perangkap dan keseheatan kamu berkurang 25 poin ")
+            println("Kesehatan anda menjadi $kesehatanPemain")
+            if (kesehatanPemain <= 0) {
+                println("\nKesehatan kamu sudah habis. Kamu kalah!")
+                sedangBermain = false
+                break
+            }
         }
 
-        if (kesehatanPemain <= 0) {
-            println("Sayang sekali, $namaPemain tidak sanggup melanjutkan...")
-            sedangBermain = false
-        }
     }
-    println("\n=== Permainan selesai ===")
+
+
 }

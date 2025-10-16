@@ -1,8 +1,9 @@
-fun main() {
-    var i=0
+fun main(){
+    var i = 0
 
-    do {
-        println("Do $i")
+     do{
+
+        print("Do $i")
         i++
-    }while (i>10)
+    }while (i < 10)
 }

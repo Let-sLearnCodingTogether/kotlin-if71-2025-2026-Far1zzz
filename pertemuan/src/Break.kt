@@ -1,9 +1,9 @@
-fun main() {
-    var sum =1
+fun main(){
+    var sum = 1
 
-    while (true){
+    while(true){
         println("Sum: $sum")
-        if (sum >= 10){
+        if(sum>=10) {
             break
         }
         sum++

@@ -1,4 +1,4 @@
 fun main() {
-    val myChar: Char='a'
+    val myChar : Char = 'a'
     println(myChar)
 }
