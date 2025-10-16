@@ -35,9 +35,11 @@
   "keyToString": {
     "Kotlin.ClassAndObjectConstructorDefaultValueKt.executor": "Run",
     "Kotlin.ClassAndObjectKt.executor": "Run",
+    "Kotlin.ClassDesctructuringDeclarationsKt.executor": "Run",
     "Kotlin.ClassFuncKt.executor": "Run",
     "Kotlin.ClassFuncOverloadKt.executor": "Run",
     "Kotlin.ClassThisKeywordKt.executor": "Run",
+    "Kotlin.GameItemKt.executor": "Run",
     "Kotlin.TestKt.executor": "Run",
     "Kotlin.UserDataClassCopyKt.executor": "Run",
     "Kotlin.UserDataClassKt.executor": "Run",
