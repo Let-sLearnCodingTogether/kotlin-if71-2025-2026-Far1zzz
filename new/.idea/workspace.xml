@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5f2b886-4519-4bda-ab05-6213894f447d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/LatihanUTS2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +45,8 @@
     "Kotlin.ExtensionPropertiesKt.executor": "Run",
     "Kotlin.GameItemKt.executor": "Run",
     "Kotlin.LatihanSetGetKt.executor": "Run",
+    "Kotlin.LatihanUTS2Kt.executor": "Run",
+    "Kotlin.LatihanUTSKt.executor": "Run",
     "Kotlin.ObservasiPropertiesKt.executor": "Run",
     "Kotlin.TestKt.executor": "Run",
     "Kotlin.UserDataClassCopyKt.executor": "Run",
