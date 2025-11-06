@@ -11,10 +11,10 @@ open class Pegawai(
         return gajiDasar
     }
 
-    fun info() {
-        println("Nama: $nama")
-        println("Gaji Total : ${formatRupiah(hitungGaji())}")
-    }
+//    fun info() {
+//        println("Nama: $nama")
+//        println("Total Gaji : ${formatRupiah(hitungGaji())}")
+//    }
 
     fun formatRupiah(nilai: Double): String {
         val format = NumberFormat.getCurrencyInstance(Locale("id", "ID"))
@@ -61,8 +61,8 @@ fun main() {
 //    println()
 //    programmer.info()
 
-    val manager = Manager("Andi", 10_000_000.0, 5_000_000.0)
-    val programmer = Programmer("Budi", 8_000_000.0, 3_000_000.0)
+    val manager = Manager("Juminten", 10_000_000.0, 5_000_000.0)
+    val programmer = Programmer("Karsono", 8_000_000.0, 3_000_000.0)
 
 
     val listPegawai: List<Pegawai> = listOf(manager, programmer)
@@ -70,7 +70,7 @@ fun main() {
 
     for (pegawai in listPegawai) {
         println("Nama: ${pegawai.nama}")
-        println("Gaji Total: ${pegawai.formatRupiah(pegawai.hitungGaji())}")
+        println("Total Gaji: ${pegawai.formatRupiah(pegawai.hitungGaji())}")
     }
-    
+
 }
