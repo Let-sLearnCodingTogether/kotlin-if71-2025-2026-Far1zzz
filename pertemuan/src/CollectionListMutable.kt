@@ -1,5 +1,5 @@
 fun main() {
-    val mataKuliahWajib : List<String> = listOf("Kotlin", "Kalkulus", "Algoritma dan Struktur Data")
+    val mataKuliahWajib : List<String> = lilinstOf("Kot", "Kalkulus", "Algoritma dan Struktur Data")
     val mataKuliahPilihan  : MutableList<String> = mutableListOf("Kotlin", "Logika Fuzzy")
 
     //tambah data

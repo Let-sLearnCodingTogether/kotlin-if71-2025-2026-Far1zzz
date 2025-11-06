@@ -26,18 +26,6 @@ open class Pegawai(
 class Manager(
     nama: String,
     gajiDasar: Double,
-    val tunjangan: Double
-) : Pegawai(nama, gajiDasar) {
-
-    override fun hitungGaji(): Double {
-        return gajiDasar + tunjangan
-    }
-}
-
-
-class Programmer(
-    nama: String,
-    gajiDasar: Double,
     val bonus: Double
 ) : Pegawai(nama, gajiDasar) {
 
@@ -47,17 +35,42 @@ class Programmer(
 }
 
 
+class Programmer(
+    nama: String,
+    gajiDasar: Double,
+    val project: Double
+) : Pegawai(nama, gajiDasar) {
+
+    override fun hitungGaji(): Double {
+        return gajiDasar + project
+    }
+}
+
+
 fun main() {
+//    val manager = Manager("Andi", 10_000_000.0, 5_000_000.0)
+//    val programmer = Programmer("Budi", 8_000_000.0, 3_000_000.0)
+//
+//
+//
+//    println("Gaji ${manager.nama} (Manager): ${manager.formatRupiah(manager.hitungGaji())}")
+//    println("Gaji ${programmer.nama} (Programmer): ${programmer.formatRupiah(manager.hitungGaji())}")
+//
+//    println()
+//    manager.info()
+//    println()
+//    programmer.info()
+
     val manager = Manager("Andi", 10_000_000.0, 5_000_000.0)
     val programmer = Programmer("Budi", 8_000_000.0, 3_000_000.0)
 
 
+    val listPegawai: List<Pegawai> = listOf(manager, programmer)
 
-    println("Gaji ${manager.nama} (Manager): ${manager.formatRupiah(manager.hitungGaji())}")
-    println("Gaji ${programmer.nama} (Programmer): ${programmer.formatRupiah(manager.hitungGaji())}")
 
-    println()
-    manager.info()
-    println()
-    programmer.info()
+    for (pegawai in listPegawai) {
+        println("Nama: ${pegawai.nama}")
+        println("Gaji Total: ${pegawai.formatRupiah(pegawai.hitungGaji())}")
+    }
+    
 }
